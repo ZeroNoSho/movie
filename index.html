@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <title>Ari Movie DB!!!</title>
+    <script src="jquery.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/0ac2a089e1.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!--Nav-->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand-primary">Ari Movie DB!!!</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span><i class="fa-solid fa-bars" style="color: #0d6efd"></i></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active home" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Popular</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item popular" data-popular="movie" href="#">Movie popular</a></li>
+                <li><a class="dropdown-item popular" data-popular="tv" href="#">Tv popular</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Genre </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item Genreli" data-genre1="28" href="#">Action</a></li>
+                <li><a class="dropdown-item Genreli" data-genre1="12" href="#">Adventure</a></li>
+                <li><a class="dropdown-item Genreli" data-genre1="16" href="#">Animation</a></li>
+                <li><a class="dropdown-item Genreli" data-genre1="27" href="#">Horor</a></li>
+                <li><a class="dropdown-item Genreli" data-genre1="35" href="#">Comedy</a></li>
+                <li><a class="dropdown-item Genreli" data-genre1="80" href="#">Crime</a></li>
+                <li><a class="dropdown-item Genreli" data-genre1="14" href="#">Fantasy</a></li>
+                <li><a class="dropdown-item Genreli" data-genre1="18" href="#">Drama</a></li>
+                <li><a class="dropdown-item Genreli" data-genre1="99" href="#">Documentary</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Negara </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item negara" data-negara="en" href="#">Amerika & Inggris</a></li>
+                <li><a class="dropdown-item negara" data-negara="ms" href="#">Malaysia</a></li>
+                <li><a class="dropdown-item negara" data-negara="cn" href="#">Cina</a></li>
+                <li><a class="dropdown-item negara" data-negara="ko" href="#">Korea</a></li>
+                <li><a class="dropdown-item negara" data-negara="th" href="#">Thailand</a></li>
+                <li><a class="dropdown-item negara" data-negara="id" href="#">Indonesia</a></li>
+                <li><a class="dropdown-item negara" data-negara="hi" href="#">India</a></li>
+                <li><a class="dropdown-item negara" data-negara="ja" href="#">Jepang</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Tahun </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item year" data-year="2022" href="#">2022</a></li>
+                <li><a class="dropdown-item year" data-year="2021" href="#">2021</a></li>
+                <li><a class="dropdown-item year" data-year="2020" href="#">2020</a></li>
+                <li><a class="dropdown-item year" data-year="2019" href="#">2019</a></li>
+                <li><a class="dropdown-item year" data-year="2018" href="#">2018</a></li>
+                <li><a class="dropdown-item year" data-year="2017" href="#">2017</a></li>
+                <li><a class="dropdown-item year" data-year="2016" href="#">2016</a></li>
+                <li><a class="dropdown-item year" data-year="2015" href="#">2015</a></li>
+                <li><a class="dropdown-item year" data-year="2014" href="#">2014</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input type="text" class="form-control input-keyword" placeholder="Serach Movie.." />
+            <button class="btn btn-outline-primary search-button" type="button">Serach</button>
+          </form>
+          <form class="hidenmode1">
+            <div class="form-check form-switch">
+              <input id="dark" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+              <label class="form-check-label" for="flexSwitchCheckDefault">Dark mode</label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!--Akhir Nav-->
+
+    <!--Card Utama-->
+    <div class="container">
+      <div class="row moviecontainer"></div>
+    </div>
+    <!--Akhir Card Utama-->
+
+    <!--Scroll-->
+    <!--Akhir scroll-->
+
+    <!-- Modal -->
+    <div class="modal fade" id="MovieDetailModal" tabindex="-1" aria-labelledby="MovieDetailModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="MovieDetailModalLabel">Details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Akhir Modal -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
